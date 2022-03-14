@@ -109,42 +109,6 @@ Some questions:
 - On any day, visibility could be affected by humidity, precipitation and cloud cover
 - Pressure, wind speed and wind direction should share some relation as pressure difference creates the wind and decides its direction.
 
-## Approaches I want to test
-1. Time series (univariate)
-2. Time Series (multivariate)
-3. A tree based model which instead of considering exact date, considers season in general and other variables (related) to make prediction.
-4. any other if clicks.
 
-## Steps:
-1. Initial: 
-   a. Exploring data to understand its structure
-   b. Cleaning
-   c. Making Data dictionary
-   d. Checking for columns with ambiguous values
-   e. Make seperate dataframes for time series and tree based algorithm testing
-   e. Feature Engineering: Type conversion, date as index( in time series), datetime, new columns (like season), etc
-   f. Exploratory Data Analysis: to check correlation with the target variable and any chance of multicollinearity, check relationship between different variables and how they aaffect 
-   g. Feature selection
-   h. Test-Train Split
-   i. Building Models
-   
-   
-2. Time Series (univariate): 
-    a. Find minimum and maximum temperature of a day, make them into new columns. 
-    b. Make a new dataframe with date as index (thus, unique and one value for each day. Currently the readings are taken at an interval of 3 hrs, hence multiple readings for same date.) and minimum and maximum temperature as other columns. 
-    c. Or we could try out average temperature only for each day.
-    d. Find relationship and predict.
-    e. CHeck using RMSE 
-3. Time Series (multivariate):
-    a.  Find minimum and maximum temperature of a day, make them into new columns.
-    b.  Make a new dataframe with date as index (thus, unique and one value for each day. Currently the readings are taken at an interval of 3 hrs, hence multiple readings for same date.) and minimum and maximum temperature as other columns. 
-    c. Add other parameters as per the relevance.
-    d. Make models and compare performance.
-    e. Add/Remove data by adding/removing columns as relevant.
-4. Tree based :
-    a. Instead of considering date as primary importance, devide dates into sesons, i.e, make a seasons column.
-    b. Find average temperature for each day and have one entry per day (of temperature)
-    c. Make new dataframe with these and additional columns as per requirement
-    d. Make predictions and check performance
-    e. alternative could be to also consider time of the day.
+
     
